@@ -2,7 +2,7 @@ const express = require("express");
 
 const server = express();
 
-const users = ["Artenes", "Reachel", "Monique"];
+const users = ["Juliet", "Reachel", "Monique"];
 
 server.get("/users/:index", (req, res) => {
   const { index } = req.params;
