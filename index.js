@@ -33,4 +33,13 @@ server.put("/users/:index", (req, res) => {
   return res.json(users);
 });
 
+server.delete("/users/:index", (req, res) => {
+  const { index } = req.params;
+
+  users.splice(index, 1);
+
+  //good practice to just send a status code
+  return res.send();
+});
+
 server.listen(3000);
